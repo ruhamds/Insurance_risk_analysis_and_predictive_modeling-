@@ -13,7 +13,7 @@ dist/
 # DVC
 .dvc/cache/
 *.dvc.lock
-data/
+data/MachineLearningRating_v3.txt
 
 # IDEs and Editors
 .vscode/
@@ -28,3 +28,6 @@ data/
 # Environment
 .env
 *.env
+
+# Allow .dvc files in data/
+!data/*.dvc
