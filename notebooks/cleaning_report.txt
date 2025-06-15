@@ -1,0 +1,15 @@
+DATA CLEANING REPORT
+========================================
+Original records: 1,000,098
+Cleaned records: 618,174
+Records excluded: 381,924
+
+DETAILED EXCLUSIONS:
+- Zero Premiums: 381,634
+- Negative Premiums: 288
+- Negative Claims: 5
+
+PORTFOLIO METRICS:
+- Total Premium: $61,941,897.73
+- Total Claims: $62,090,763.77
+- Loss Ratio: 100.2%
