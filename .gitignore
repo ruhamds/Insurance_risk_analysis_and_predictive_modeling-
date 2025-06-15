@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+.Python
+env/
+venv/
+*.egg-info/
+pip-wheel-metadata/
+build/
+dist/
+
+# DVC
+.dvc/cache/
+*.dvc.lock
+data/
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# OS and Misc
+.DS_Store
+*.log
+*.swp
+*~
+
+# Environment
+.env
+*.env
