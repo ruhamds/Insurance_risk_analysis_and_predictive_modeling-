@@ -1,6 +1,6 @@
 Insurance Risk Analysis and Predictive Modeling 📈
 Overview
-This repository contains code and data pipelines for analyzing insurance policies from February 2014 to August 2015. The project assesses risk and profitability through Exploratory Data Analysis (EDA), statistical hypothesis testing, and a reproducible data pipeline using Data Version Control (DVC). Key objectives:
+This repository contains code and data pipelines for analyzing insurance policies from February 2014 to August 2015. The project assesses risk and profitability through Exploratory Data Analysis (EDA), statistical hypothesis testing, and a reproducible pipeline using Data Version Control (DVC). Key objectives include:
 
 Calculate Loss Ratio (TotalClaims / TotalPremium) and analyze variations by Province, VehicleType, and Gender.
 Identify distributions, outliers, and temporal trends in TotalPremium and TotalClaims.
@@ -17,8 +17,8 @@ data/: Datasets tracked by DVC (e.g., insurance_data.csv.dvc).
 notebooks/: Stores outputs (e.g., loss_ratio_province.png, descriptive_stats.csv).
 requirements.txt: Python dependencies.
 .dvc/: DVC configuration and metadata.
-task-1: Branch for Git setup and EDA.
-task-2: Branch for DVC implementation.
+task-1/: Branch for Git setup and EDA.
+task-2/: Branch for DVC implementation.
 
 Setup ⚙️
 Prerequisites
@@ -40,7 +40,8 @@ Task 2: git checkout task-2
 
 
 Set Up Python Environment:python -m venv venv
-.\venv\Scripts\Activate.ps1
+.\venv\Scripts\Activate.ps1  # Windows
+source venv/bin/activate     # macOS/Linux
 pip install -r requirements.txt
 
 
@@ -68,7 +69,7 @@ Margin: TotalPremium - TotalClaims
 Task 1: Git, EDA, and Statistical Analysis 🧠
 Git and GitHub
 
-Repository: Insurance_Risk_Analysis_and_predictive_modeling with task-1 and main branches.
+Repository: Insurance_risk_analysis_and_predictive_modeling with task-1 and main branches.
 Commits: 3+/day with descriptive messages (e.g., “Added zero premium handling”).
 CI/CD: GitHub Actions (ci.yml) runs flake8 and tests notebooks on task-1 pushes.
 
@@ -81,9 +82,9 @@ Bivariate: Scatter plots (TotalPremium vs. TotalClaims by PostalCode), correlati
 Trends: Claim frequency over TransactionMonth.
 Outliers: Box plots for TotalClaims, CustomValueEstimate.
 Visualizations:
-Bar Chart: Loss Ratio by Province (e.g., Gauteng: 116.4%).
-Scatter Plot: TotalPremium vs. TotalClaims by PostalCode.
-Line Plot: Claim frequency over time.
+Bar chart: Loss Ratio by Province (e.g., Gauteng: 116.4%).
+Scatter plot: TotalPremium vs. TotalClaims by PostalCode.
+Line plot: Claim frequency over time.
 
 
 
@@ -91,12 +92,6 @@ Statistical Thinking
 
 Distributions: TotalClaims likely right-skewed.
 Correlations: Analyzed financial variable relationships.
-Insights:
-Portfolio Loss Ratio: 100.2%.
-High-risk: Heavy Commercial vehicles (161.2% LR), SUZUKI (625.3% LR).
-Zero-premium policies impact profitability.
-
-
 
 Task 2: Data Version Control (DVC) 💾
 
@@ -132,15 +127,15 @@ Key Findings 🚀
 
 Portfolio Loss Ratio: 100.2%, indicating break-even.
 High-Risk Segments:
-Vehicle Types: Heavy Commercial (161.2% LR).
-Geographic: Gauteng (116.4% LR).
-Makes: SUZUKI (625.3% LR), JMC, Hyundai, Polarsun.
+Vehicle Types: Heavy Commercial (161.2% LR)
+Geographic: Gauteng (116.4% LR)
+Makes: SUZUKI (625.3% LR), JMC, Hyundai, Polarsun
 
 
 Zero-Premium Policies: 381,634 cases (38.2%), reducing profitability.
 Recommendations:
 15% premium increase for commercial vehicles.
-Blacklist high-risk vehicle makes (e.g., SUZUKI).
+Blacklist high-risk makes (e.g., SUZUKI).
 
 
 
@@ -161,4 +156,5 @@ DVC
 GitHub
 Loss Ratio
 
-
+License
+MIT License
